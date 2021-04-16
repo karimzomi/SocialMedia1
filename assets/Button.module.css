@@ -1,0 +1,50 @@
+
+.CButton{
+    padding: 10px 15px ;
+    border: none;
+    font-size: 1rem;
+    color: black;
+    outline: none;
+    position: relative;
+    /* background-color: var(--background); */
+    background-color: white; 
+}
+.Border{
+    background-clip: padding-box;
+    border-radius: 5px;
+    border: solid 1px transparent;
+}
+
+.Border:hover{
+    background:linear-gradient(to left, var(--MainColor),var(--SecondColor)) no-repeat;
+
+}
+
+.Border::after{
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    margin: -1px;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    padding: inherit;
+    z-index: -1;
+    background:linear-gradient(to left, var(--MainColor) , var(--SecondColor)) ;
+}
+.Neon::after{
+    content: '';
+    position: absolute;
+    top:0px;
+    left:0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+    filter: blur(5px);
+    transition: all 0.5s;
+    background:linear-gradient(to left,var(--MainColor),var(--SecondColor)) ;
+}
+.Neon:hover::after{
+    filter: blur(10px);
+}

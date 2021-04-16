@@ -1,0 +1,124 @@
+.Form_container{
+position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ background-color: var(--SecondColor);
+min-width: fit-content;
+width: 350px;
+padding: 10px;
+padding-bottom: 30px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+} 
+.Form_container::before{
+    top: -10%;
+    left: 80%;
+    z-index: 1;
+    animation: float 2s infinite ease-in-out ;
+}
+.Form_container::before,.Form_container span:first-child{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.Form_container span:first-child{
+    left: 10%;
+    bottom: -20%;
+    animation: float2 2s infinite ease-in-out ;
+    animation-delay: -0.5s;
+
+}
+@keyframes float2{
+    0%,100%{
+    bottom: -20%;
+    }
+    50%{
+    bottom: -25%;
+    }
+}
+@keyframes float{
+    0%,100%{
+    top: -10%;
+    }
+    50%{
+        top: -15%;
+    }
+}
+.Form_container::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    z-index: -1;
+    border-radius: inherit;
+    background-image: linear-gradient(to right,var(--EffectColor1),var(--EffectColor2));
+}
+
+.Form_container h1{
+    background-image: linear-gradient(to right,var(--EffectColor1),var(--EffectColor2));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid var(--TextDarker);
+    width: 100%;
+    text-align: center;
+    padding-bottom:5px;
+}
+.Form_container .Wrong{
+    border:1px solid  red;
+}
+
+.Form_container button{
+    border: none ;
+    outline: none;
+
+}
+
+.Form_container .button{
+    position: absolute;
+    bottom: -20px;
+    z-index: 99;
+}
+.Form_container .button button{
+    background-color: var(--ThirdColor);
+    border: none;
+    font-size: 1.25rem;
+    color: var(--Text);
+    position: relative;
+    border-radius: 50px;
+    padding: 5px 10px;
+    box-shadow: 0 0 10px black;
+
+
+}
+.Form_container .button button::after,.Form_container .button button::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to right,var(--EffectColor1),var(--EffectColor2));
+    top:-2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: inherit;
+    z-index: -1;
+    transition: all 0.5s;
+}
+.Form_container .button button:hover::before{
+    filter: blur(5px);
+}
+@media screen and (max-width:350px){
+.Form_container{
+    width: fit-content;
+}
+.Form_container::before{
+    left: 70%;
+}
+}

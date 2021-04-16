@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+  background-color: var(--MainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+:root{
+  --MainColor:#252238;
+  --SecondColor: #2b283e;
+  --ThirdColor:#2f2c43;
+  --FourthColor:#39364c;
+  --EffectColor1:#0093E9;
+  --EffectColor2:#80D0C7;
+  --Text:#625e75;
+  --TextDarker:#514e5f;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+
+}

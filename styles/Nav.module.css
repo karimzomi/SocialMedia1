@@ -1,0 +1,18 @@
+.Nav_Container{
+    position: sticky;
+    height: 80px;
+    background-color: aquamarine;
+    top: -10px;
+    display: grid;
+    place-items: center;
+}
+.Nav_Container ul{
+    width: 100%;
+    position: sticky;
+    height: 70px;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
